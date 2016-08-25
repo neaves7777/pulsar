@@ -1,0 +1,8 @@
+#!/bin/bash
+t=`date +"%D %T"`
+for s in $@
+do
+         result=`ping -c 1 $s| egrep "icmp| packet loss"|sed -e 's/64 bytes//' -e "s/from /server=$s,ip=/I" -e 's/ (/,ip=/' -e 's/://' -e 's/)://' -e 's/ time=/,time=/' -e 's/ ms//' -e 's/ icmp_seq=1 /,/' -e 's/100%/packet_loss=100%,/'  -e 's/ 0%/packet_loss=0%,/' -e 's/1 packets transmitted,//' -e 's/[0,1] received//'   `
+         echo $t $result
+done
+
