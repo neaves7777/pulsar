@@ -1,0 +1,13 @@
+errormsg,sourcetype
+call stack,jde_log
+zombie,jde_log
+java.lang.OutOfMemoryError,jde_web_log
+communication,jde_log
+unable to send,jde_log
+timeout oracle connection,jde_log
+Abnormal error,jde_web_log
+JDECacheOpenCursor NOT entering,jde_log
+bsfn failed,jde_web_log
+open table not closed,jde_log
+request timeout,jde_web_log
+severe,jde_log
